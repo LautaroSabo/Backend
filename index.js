@@ -29,6 +29,14 @@ class Usuario {
         this.libros.push({nombre: name  , autor: author})
         console.log(this.libros)
     }
+
+    getBookName(){
+        
+        return this.libros.map(libros => libros.nombre)
+        
+    }
+
+    
     
 }
 
@@ -40,10 +48,12 @@ let xiomara = new Usuario ("Xiomara", "Sabo",[], ["Perro","Gato"])
 let magali = new Usuario ("Magali","Herrera",[],[])
 
 
+
 console.log(lautaro.getFullName())
 console.log(axel.addMascota())
 console.log(xiomara.countMascotas())
 console.log(magali.addBooks("Los ojos del Perro Siberiano", "Antonio Santa Ana"))
+console.log(magali.getBookName())
 
 
 
