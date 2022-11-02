@@ -1,5 +1,5 @@
 
-//
+
 class Usuario {
     
             constructor(nombre, apellido,libros=[], mascotas=[] ){
@@ -18,10 +18,16 @@ class Usuario {
         this.mascotas.push(newMascota)
         return`El usuario tiene de mascota un ${this.mascotas}`
     }
-
+    
     countMascotas(){
         
         return `El Usuario ${this.nombre} tiene ${this.mascotas.length} y son ${this.mascotas}`
+    }
+    
+    addBooks(name, author){
+
+        this.libros.push({nombre: name  , autor: author})
+        console.log(this.libros)
     }
     
 }
@@ -31,11 +37,13 @@ class Usuario {
 let lautaro = new Usuario ("Lautaro","Sabo",[],[])
 let axel = new Usuario("Axel","Sabo",[],["Gato"])
 let xiomara = new Usuario ("Xiomara", "Sabo",[], ["Perro","Gato"])
+let magali = new Usuario ("Magali","Herrera",[],[])
 
 
-//console.log(lautaro.getFullName())
-//console.log(axel.addMascota())
+console.log(lautaro.getFullName())
+console.log(axel.addMascota())
 console.log(xiomara.countMascotas())
+console.log(magali.addBooks("Los ojos del Perro Siberiano", "Antonio Santa Ana"))
 
 
 
